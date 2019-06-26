@@ -34,7 +34,7 @@ module.exports = {
         code: 404
     },
 
-    RECEIVER_NOT_FOUND: {
+    AD_NOT_FOUND: {
         message: 'Ad does not exist',
         code: 404
     }
