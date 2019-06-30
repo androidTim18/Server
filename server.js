@@ -19,12 +19,11 @@ app.use('/', router);
 router.post('/register', service.register);
 router.post('/login', service.login);
 router.post('/test', service.test);
-/*router.get('/ads', service.getAds);
-router.get('/ad/:id', service.getAd);
-router.post('/newad', service.addAd);
-router.post('/logout', service.logout);
+router.get('/ads', service.getAds);
+//router.get('/ad/:id', service.getAd);
+router.post('/newad', service.sendAd);
+//router.post('/logout', service.logout);
 
-*/
 
 app.listen(8000);
 console.log('Listening on port 8000');

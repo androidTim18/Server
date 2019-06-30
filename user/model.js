@@ -57,17 +57,6 @@ userSchema.statics.isLogged = function(session, callback) {
     });
 };
 
-/*
-userSchema.statics.getUsers = function(callback) {
-    var query = model.find({}).select({ "username": 1, "_id": 0});
-
-    query.exec(function (err, someValue) {
-        if (err) return callback(null, err);
-        return callback(someValue, null);
-    });
-
-};
-*/
 userSchema.statics.logout = function(email, callback) {
     model.findOne({email: email}, function(err, found) {
         if (!found) {
@@ -83,17 +72,7 @@ userSchema.statics.logout = function(email, callback) {
         });
     });
 };
-/*
-profileSchema.statics.checkReceiver = function(username, callback) {
-    model.findOne({username: username}, function(err, found) {
-        if (!found) {
-            return callback(false);
-        }
 
-        return callback(true);
-    });
-};
-*/
 
 var model = mongoose.model('user', userSchema);
 
